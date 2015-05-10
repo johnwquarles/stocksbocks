@@ -212,7 +212,7 @@ function makeBuyRow(db_data, id) {
 
   var td_1 = document.createElement('TD');
   tr.appendChild(td_1);
-  var text_1 = document.createTextNode(buy_number);
+  var text_1 = document.createTextNode(commafy(buy_number));
   td_1.appendChild(text_1);
 
   var td_2 = document.createElement('TD');
@@ -222,7 +222,7 @@ function makeBuyRow(db_data, id) {
 
   var td_3 = document.createElement('TD');
   tr.appendChild(td_3);
-  var text_3 = document.createTextNode("$" + (LastPrice_use_this * parseInt(buy_number)).toFixed(2));
+  var text_3 = document.createTextNode("$" + commafy((LastPrice_use_this * parseInt(buy_number)).toFixed(2)));
   td_3.appendChild(text_3);
 
   var td_4 = document.createElement('TD');
@@ -337,4 +337,24 @@ function makeBuyForm() {
   p_element.appendChild(p_text);
 
   return docFragment;
+}
+
+function commafy(num) {
+  var decimal = num.indexOf(".");
+  if (decimal !== -1) {
+    var num_arr = num.split("").slice(0,decimal).reverse();
+    var decimal_part = num.split("").slice(decimal).join("");
+  } else {
+    var num_arr = num.split("").reverse();
+  }
+  for (var i = 1; i < num_arr.length; i++) {
+    if (i % 3 === 0) {
+      num_arr[i] += ",";
+    }
+  }
+  new_num = num_arr.reverse().join("");
+  if (decimal_part) {
+    new_num += decimal_part;
+  }
+  return new_num;
 }
