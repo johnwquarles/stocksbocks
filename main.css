@@ -1,0 +1,191 @@
+body {
+  font-family: 'Francois One', sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  background-image: url('http://cdn2.business2community.com/wp-content/uploads/2013/03/WallStreetSignGeneric20120305.jpg');
+}
+
+.quotewrap {
+  display: block;
+}
+
+.quote {
+  display: inline-block;
+  margin: 20px 0 80px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.quote:empty {
+  display:none;
+}
+
+.quote > company, .quote > price, .quote > high, .quote > low {
+  display: block;
+  margin: 10px;
+}
+
+.quote > high, .quote > low {
+  display: inline-block;
+}
+
+.header {
+  display: block;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 100px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 5px 30px;
+  border-radius: 10px;
+}
+
+form>input {
+  margin-bottom: 40px;
+}
+
+form>input, button {
+  font-size: 60px;
+  padding: 10px;
+}
+
+form>input:focus, button:focus {
+  outline:none;
+}
+
+button {
+  font-family: 'Francois One', sans-serif;
+  background-color: rgba(0, 128, 0, 0.85);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.submit {
+  margin-bottom: 40px;
+}
+
+.error {
+  transition: opacity 1000ms;
+  background-color: red;
+  display: inline-block;
+  padding: 0 50px;
+  font-size: 80px;
+  margin: 40px 0;
+}
+
+.error:empty {
+  display: none;
+}
+
+.error>p {
+  margin: 0;
+  position: relative;
+  top: 10px;
+}
+
+company {
+  font-size: 80px;
+}
+
+price {
+  font-size: 80px;
+}
+
+high {
+  color: red;
+}
+
+low {
+  color: blue;
+}
+
+table {
+  margin: 20px auto 90px;
+  width: 80%;
+  font-size: 30px;
+  text-align: left;
+  background-color: white;
+  border: 3px solid black;
+  padding: 15px;
+}
+
+tfoot {
+  text-align: right;
+}
+
+thead {
+  text-decoration: underline;
+}
+
+.buyform > form > button {
+  background-color: rgba(0, 0, 128, 0.85);
+}
+
+.buyform input.textfield, .buyform .submit{
+  margin-bottom: 0;
+}
+
+.buyform p {
+  background-color: rgba(0, 0, 128, 0.85);
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 18px;
+  padding: 2px 5px;
+}
+
+.forms-wrapper {
+  position: relative;
+}
+
+form button {
+  margin-left: 10px;
+}
+
+.content {
+  text-align: center;
+}
+
+button.delete-button {
+  height: 30px;
+  width: 120px;
+  background-color: red;
+  font-size: 22px;
+  text-align: center;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.delete-cell {
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.thankyou {
+  transition: opacity 1000ms;
+  background-color: green;
+  display: inline-block;
+  padding: 0 50px;
+  font-size: 50px;
+  margin: 40px 0;
+  border-radius: 4px;
+}
+
+.thankyou:empty {
+  display: none;
+}
+
+.thankyou>p {
+  margin: 0;
+}
