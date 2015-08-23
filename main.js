@@ -33,7 +33,7 @@ function makeError() {
   docFragment.appendChild(p);
   var text = document.createTextNode("(ノಠ益ಠ)ノ WAT");
   p.appendChild(text);
-  
+
   return docFragment;
 }
 
@@ -44,7 +44,7 @@ function makeThankyou() {
   docFragment.appendChild(p);
   var text = document.createTextNode("｜*￣∇￣｜ thanku ♪");
   p.appendChild(text);
-  
+
   return docFragment;
 }
 
@@ -59,7 +59,7 @@ function addQuote(data) {
     return false;
   }
   $QUOTE.append(makeQuote(data));
-  
+
   if (!($(".buyform input").length)) {
     appendBuyForm();
   }
@@ -68,7 +68,7 @@ function addQuote(data) {
 function makeQuote(data) {
   var obj = new Date(data.Timestamp);
   var date = obj.toDateString();
-  
+
   var docFragment = document.createDocumentFragment(); // contains all gathered nodes
 
   var time = document.createElement('TIME');
@@ -109,7 +109,7 @@ $SUBMITBUTTON.click(function(event) {
 function appendBuyForm() {
   $BUYFORM.append(makeBuyForm());
   var $buy_button = $(".buyform > form > button");
-  
+
   $buy_button.click(function(event) {
     event.preventDefault();
     var regex = /^([1-9]|[1-9][0-9]+)$$/
@@ -178,7 +178,7 @@ function insertToTable(db_data, id) {
       $BUYTABLE.append(makeTableFooter());
       $TOTAL_CELL = $(".total_cost_cell");
     }
-  
+
   $(makeBuyRow(db_data, id)).insertBefore($("table tfoot"));
   updateTotal();
 }
@@ -192,7 +192,7 @@ function makeBuyRow(db_data, id) {
   var LastPrice_use_this = ((db_data && db_data.LastPrice) || CURRENT_STOCK_OBJ.LastPrice);
   var total_cost_this_time = buy_number * LastPrice_use_this;
   running_total += total_cost_this_time;
-  
+
   var docFragment = document.createDocumentFragment(); // contains all gathered nodes
 
   var tr = document.createElement('TR');
@@ -233,7 +233,7 @@ function makeBuyRow(db_data, id) {
   var button_text = document.createTextNode("Delete");
   button_3.appendChild(button_text);
   td_4.appendChild(button_3);
-  
+
   return docFragment;
 }
 
@@ -260,9 +260,9 @@ function makeTableFooter() {
   var td2 = document.createElement('TD');
   var text = document.createTextNode("Total cost:\xA0\xA0");
   td2.appendChild(text);
-  
+
   tr.appendChild(td2);
-  
+
   var td = document.createElement('TD');
   td.classList.add("total_cost_cell");
   tr.appendChild(td);
@@ -306,10 +306,10 @@ function makeTableHeading() {
   tr.appendChild(th_3);
   var text_3 = document.createTextNode("Total price");
   th_3.appendChild(text_3);
-  
+
   var th_4 = document.createElement("TH");
   tr.appendChild(th_3);
-  
+
  return docFragment;
 }
 
@@ -330,7 +330,7 @@ function makeBuyForm() {
   form.appendChild(button);
   var text = document.createTextNode("Purchase");
   button.appendChild(text);
-  
+
   p_element = document.createElement('P');
   docFragment.appendChild(p_element);
   var p_text = document.createTextNode("note that 'purchase' refers to shares of the currently displayed stock quote");

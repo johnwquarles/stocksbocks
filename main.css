@@ -2,7 +2,11 @@ body {
   font-family: 'Francois One', sans-serif;
   box-sizing: border-box;
   text-align: center;
-  background-image: url('http://cdn2.business2community.com/wp-content/uploads/2013/03/WallStreetSignGeneric20120305.jpg');
+  background: url('bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .quotewrap {
